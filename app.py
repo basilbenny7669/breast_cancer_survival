@@ -133,7 +133,7 @@ def main():
         to **estimate overall survival** for breast cancer patients based on 
         clinical features.
 
-        > ⚠️ **Important:** This tool is for educational/demonstration purposes only 
+        >  **Important:** This tool is for educational/demonstration purposes only 
         and must **not** be used for real medical decision-making.
         """
     )
@@ -172,9 +172,9 @@ def main():
         st.subheader("Prediction")
 
         if pred == 1:
-            st.success("✅ Predicted outcome: **Survived**")
+            st.success(" Predicted outcome: **Survived**")
         else:
-            st.error("⚠️ Predicted outcome: **Did not survive**")
+            st.error(" Predicted outcome: **Did not survive**")
 
         if survival_prob is not None:
             st.write(f"Estimated probability of survival: **{survival_prob:.1%}**")

@@ -22,7 +22,7 @@ MODEL_PATH = MODELS_DIR / "breast_cancer_survival_rf.joblib"
 
 
 def load_data():
-    """Load the METABRIC dataset."""
+   
     df = pd.read_csv(DATA_PATH)
 
     # Show basic info once
@@ -32,10 +32,7 @@ def load_data():
 
 
 def build_features_and_target(df: pd.DataFrame):
-    """
-    Select the features used for training and the target column.
-    Adjust column names if they differ in your CSV.
-    """
+   
 
     # ---- Target ----
     target_col = "overall_survival"
@@ -46,8 +43,7 @@ def build_features_and_target(df: pd.DataFrame):
     # Make sure target is 0/1 integer (if it isn't already)
     df[target_col] = df[target_col].astype(int)
 
-    # ---- Feature list ----
-    # These names must match EXACTLY what you will use in Streamlit.
+ 
     clinical_features = [
         "age_at_diagnosis",
         "tumor_size",
